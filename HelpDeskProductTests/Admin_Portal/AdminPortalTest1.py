@@ -1,3 +1,4 @@
+# Functions from CommonTest1 were not called here properly
 from CommonTests import CommonTests1
 import sys
 
@@ -8,6 +9,7 @@ class AdminPortalTest1(CommonTests1):
             method_name = sys._getframe().f_code.co_name
             class_name = self.__class__.__name__
             print("start of method:", class_name)
+            # Below given functions were  not properly called
             self.login_as_admin()
             self.test_case_1()
             self.test_case_3()
@@ -19,3 +21,4 @@ class AdminPortalTest1(CommonTests1):
 if __name__ == "__main__":
     admin_test = AdminPortalTest1()
     admin_test.scenario1()
+

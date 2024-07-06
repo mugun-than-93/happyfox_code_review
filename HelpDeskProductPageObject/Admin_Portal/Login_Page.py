@@ -1,4 +1,6 @@
 from selenium.webdriver.common.by import By
+
+# AppPage is not required here
 from webdriverbase import AppPage
 
 class BasePage:
